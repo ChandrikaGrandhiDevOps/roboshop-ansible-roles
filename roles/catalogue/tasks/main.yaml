@@ -3,12 +3,14 @@
     name: common
     tasks_from: app-setup
 
-- name: 
-  import_role:
-    name: common/tasks
-    tasks_from: nodejs
+
 
 - name: mongodb setup
   import_role:
-    name: common/tasks
+    name: common
     tasks_from: mongodb-setup 
+
+- name: 
+  import_role:
+    name: common/tasks
+    tasks_from: nodejs    
