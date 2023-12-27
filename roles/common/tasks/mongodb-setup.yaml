@@ -20,7 +20,6 @@
 # - name:  print the count
 #   ansible.builtin.debug:
 #     msg: "product count: {{product_count}}"
-
 - name: "load catalogue data"
   ansible.builtin.command: mongo --host mongodb.crobo.shop < /app/schema/{{component}}.js
   when: entries_count.stdout == "0"
