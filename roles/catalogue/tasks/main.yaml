@@ -1,0 +1,4 @@
+- name:
+  import_role:
+    name: common
+    tasks_from: app-setup.yaml
