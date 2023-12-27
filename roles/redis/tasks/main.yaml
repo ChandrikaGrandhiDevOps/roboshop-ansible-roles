@@ -1,4 +1,4 @@
-  tasks:
+  
 - name: redis repo
   ansible.builtin.command: dnf install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
 
