@@ -12,6 +12,11 @@
   register: entries_count
   when: component == "catalogue"
 
+- name: load catalogue data
+  ansible.builtin.shell: "mongo --host mongodb.crobo.shop < /app/schema/{{component}}.js"
+  when: entries_count.stdout == "0"
+  ignore_erros: true  
+
 # - name: get entries count
 #   ansible.builtin.command: mongo --host mongodb.crobo.shop --quiet --eval 'db =db. getSiblingDB("user"); db.users.count()'     
 #   register: entries_count
@@ -21,7 +26,3 @@
 #   ansible.builtin.debug:
 #     msg: "product count: {{product_count}}"
 
-- name: load catalogue data
-  ansible.builtin.shell: "mongo --host mongodb.crobo.shop < /app/schema/{{component}}.js"
-  when: entries_count.stdout == "0"
-  ignore_erros: true
