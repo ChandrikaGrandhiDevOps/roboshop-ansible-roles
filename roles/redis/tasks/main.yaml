@@ -1,6 +1,6 @@
 - name: setup redis
   hosts: redis
-  user: centos
+ 
   become: yes
 
 
