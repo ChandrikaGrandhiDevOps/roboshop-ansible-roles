@@ -7,7 +7,7 @@
   ansible.builtin.package:
     name: mongodb-org-shell
     state:  present
-- name: get entries count
+- name: "get entries count"
   ansible.builtin.command: mongo --host mongodb.crobo.shop --quiet --eval 'db =db. getSiblingDB("catalogue"); db.products.count()'     
   register: entries_count
   when: component == "catalogue"
