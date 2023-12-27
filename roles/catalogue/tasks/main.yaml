@@ -6,7 +6,7 @@
 - name: 
   import_role:
     name: common
-    tasks_from: nodejs
+    tasks_from: nodejs.yaml
 
 - name: mongodb setup
   import_role:
