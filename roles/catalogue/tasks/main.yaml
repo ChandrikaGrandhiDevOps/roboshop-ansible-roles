@@ -10,12 +10,12 @@
     name: common/tasks
     tasks_from: mongodb-setup 
 
-- name: 
+- name: js
   import_role:
     name: common/tasks
     tasks_from: nodejs   
 
-- name: 
+- name: sys
   import_role:
     name:  common/tasks
     tasks_from: systemd
