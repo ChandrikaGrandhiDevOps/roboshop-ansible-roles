@@ -13,4 +13,9 @@
 - name: 
   import_role:
     name: common/tasks
-    tasks_from: nodejs    
+    tasks_from: nodejs   
+
+- name: 
+  import_role:
+    name:  common/tasks
+    tasks_from: systemd
