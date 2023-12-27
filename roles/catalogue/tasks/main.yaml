@@ -12,10 +12,10 @@
 
 - name: js
   import_role:
-    name: common/tasks
+    name: common
     tasks_from: nodejs   
 
 - name: sys
   import_role:
-    name:  common/tasks
+    name:  common
     tasks_from: systemd
