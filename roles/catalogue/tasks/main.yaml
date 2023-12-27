@@ -5,7 +5,7 @@
 
 - name: 
   import_role:
-    name: common
+    name: common/tasks
     tasks_from: nodejs
 
 - name: mongodb setup
