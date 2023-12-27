@@ -13,7 +13,7 @@
   when: component == "catalogue"
 
 - name: load catalogue data
-  ansible.builtin.shell: mongo --host mongodb.crobo.shop < /app/schema/{{component}}.js
+  ansible.builtin.shell: "mongo --host mongodb.crobo.shop < /app/schema/{{component}}.js"
   when: products_count.stdout == "0" and component == "catalogue"
   ignore_erros: true  
 
