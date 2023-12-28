@@ -37,7 +37,7 @@
 
 - name: load cities data
   shell: mysql -h mysql.crobo.shop -uroot -p{{mysql_password}} < /app/schema/shipping.sql 
-  when: schema.stdout == "1"   
+  when: schema.stdout != "1"   
         
 
 - name: 
