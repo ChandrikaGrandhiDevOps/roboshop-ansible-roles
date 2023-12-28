@@ -7,3 +7,8 @@
   import_role:
     name: common
     tasks_from: app-setup   
+
+- name: getting systemd
+  import_role:
+    name: common
+    tasks_from: systemd
