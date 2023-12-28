@@ -8,20 +8,27 @@
     name: mongodb-org-shell
     state:  present
 
-- name: get entries count
-  ansible.builtin.shell: mongo --host mongodb.crobo.shop --quiet --eval 'db =db. getSiblingDB("catalogue"); db.products.count()'     
-  register: entries_count
+- name: "get {{component}} count"
+  ansible.builtin.shell: mongo --host mongodb.crobo.shop --quiet --eval 'db =db. getSiblingDB("catalogue"); db.products.count()'
+  register: productss_count
   when: component == "catalogue"
 
-- name: get entries count
-  ansible.builtin.shell: mongo --host mongodb.crobo.shop --quiet --eval 'db =db. getSiblingDB("user"); db.products.count()'     
-  register: entries_count
-  when: component == "user"  
+- name: "get {{component}} count"
+  ansible.builtin.shell: mongo --host mongodb.crobo.shop --quiet --eval 'db =db. getSiblingDB("user"); db.products.count()'    
+  register: users_count
+  when: component == "user" 
 
-- name: load {{component}} data
+- name: print the count
+  debug:
+    msg: "entries count: {{entries_count}}"   
+
+- name: "load {{component}} data"
   ansible.builtin.shell: "mongo --host mongodb.crobo.shop < /app/schema/{{component}}.js"
   when: products_count.stdout == "0" and component == "catalogue"
   
 
-
+- name: "load {{component}} data"
+  ansible.builtin.shell: "mongo --host mongodb.crobo.shop < /app/schema/{{component}}.js"
+  when: products_count.stdout == "0" and component == "user"
+  
 
