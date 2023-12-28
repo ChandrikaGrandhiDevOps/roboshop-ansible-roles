@@ -1,3 +1,6 @@
+vars:
+    mysql_password: RoboShop@1
+
 - name: install maven
   dnf:
     name: maven
