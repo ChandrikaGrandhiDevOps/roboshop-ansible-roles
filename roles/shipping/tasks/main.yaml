@@ -41,7 +41,7 @@
         
 
 -  name: 
-    service:
-      name: shipping
-      enabled: yes
-      state: restarted
+  service:
+    name: shipping
+    enabled: yes
+    state: restarted
