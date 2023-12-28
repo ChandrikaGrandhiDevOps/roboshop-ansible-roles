@@ -25,11 +25,12 @@
 - name: load catalogue data
   ansible.builtin.shell: "mongo --host mongodb.crobo.shop < /app/schema/{{component}}.js"
   when: products_count.stdout == "0" and component == "catalogue"
+  ignore_errors: true
   
 
 - name: load user data
   ansible.builtin.shell: "mongo --host mongodb.crobo.shop < /app/schema/{{component}}.js"
   when: products_count.stdout == "0" and component == "user"
-  ignore_errors:true
+  ignore_errors: true
   
 
