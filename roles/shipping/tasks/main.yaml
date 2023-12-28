@@ -40,7 +40,7 @@
   when: schema.stdout != "1"   
         
 
--  name: 
+- name: 
   service:
     name: shipping
     enabled: yes
