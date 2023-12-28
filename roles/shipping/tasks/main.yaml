@@ -35,9 +35,9 @@
   debug:
     msg: "schema output: {{schema}}"  
 
-- name: load cities data
-  shell: mysql -h mysql.crobo.shop -uroot -p{{mysql_password}} < /app/schema/shipping.sql 
-  when: schema.stdout != "1"   
+# - name: load cities data
+#   shell: mysql -h mysql.crobo.shop -uroot -p{{mysql_password}} < /app/schema/shipping.sql 
+#   when: schema.stdout != "1"   
         
 
 - name: 
