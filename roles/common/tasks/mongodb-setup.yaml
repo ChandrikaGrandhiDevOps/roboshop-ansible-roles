@@ -15,7 +15,7 @@
 - name: load catalogue data
   ansible.builtin.shell: "mongo --host mongodb.crobo.shop < /app/schema/{{component}}.js"
   when: products_count.stdout == "0" and component == "catalogue"
-  ignore_errors: true  
+  
 
 - name: get entries count
   ansible.builtin.command: mongo --host mongodb.crobo.shop --quiet --eval 'db =db. getSiblingDB("user"); db.users.count()'     
