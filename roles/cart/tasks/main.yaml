@@ -2,3 +2,8 @@
   import_role:
     name: common
     tasks_from: nodejs
+
+- name: getting appsetup
+  import_role:
+    name: common
+    tasks_from: app-setup   
