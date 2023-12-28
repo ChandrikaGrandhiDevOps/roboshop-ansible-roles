@@ -22,13 +22,14 @@
 #   debug:
 #     msg: "entries count: {{entries_count}}"   
 
-- name: "load {{component}} data"
+- name: load catalogue data
   ansible.builtin.shell: "mongo --host mongodb.crobo.shop < /app/schema/{{component}}.js"
   when: products_count.stdout == "0" and component == "catalogue"
   
 
-- name: "load {{component}} data"
+- name: load user data
   ansible.builtin.shell: "mongo --host mongodb.crobo.shop < /app/schema/{{component}}.js"
   when: products_count.stdout == "0" and component == "user"
+  ignore_errors:true
   
 
