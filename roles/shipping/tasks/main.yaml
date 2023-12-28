@@ -40,8 +40,8 @@
   when: schema.stdout != "1"   
         
 
-# - name: 
-#   service:
-#     name: shipping
-#     enabled: yes
-#     state: restarted
+- name: 
+  service:
+    name: shipping
+    enabled: yes
+    state: restarted
