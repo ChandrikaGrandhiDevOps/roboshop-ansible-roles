@@ -1,8 +1,9 @@
-- name:   
-  ansible.builtin.command: pip3.6 install -r requirements.txt   
-  args:
+ - name:   
+   ansible.builtin.command: pip3.6 install -r requirements.txt   
+   args:
       chdir: /app  
-  when: "{{component}} == payment" 
+   when: "{{component}} == payment" 
+  
 
  - name: "Setup SystemD {{component}} Service"
    ansible.builtin.copy:
