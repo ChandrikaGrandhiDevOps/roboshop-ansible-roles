@@ -1,10 +1,13 @@
+- name: diable mysql
+  command: dnf module disable mysql -y
+
 - name:
   copy:
     src: mysql.repo
     dest: /etc/yum.repos.d/mysql.repo
 
-# - name:
-#   command: dnf install mysql-community-server -y
+  # - name:
+  #   command: dnf install mysql-community-server -y
 
 - name:
   dnf:
