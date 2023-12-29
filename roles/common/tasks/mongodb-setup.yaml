@@ -8,12 +8,12 @@
     name: mongodb-org-shell
     state:  present
 
-- name: "get {{component}} count"
+- name: "get catalogue count"
   ansible.builtin.shell: mongo --host mongodb.crobo.shop --quiet --eval 'db =db. getSiblingDB("catalogue"); db.products.count()'
   register: products_count
   when: component == "catalogue"
 
-- name: "get {{component}} count"
+- name: "get user count"
   ansible.builtin.shell: mongo --host mongodb.crobo.shop --quiet --eval 'db =db. getSiblingDB("user"); db.products.count()'    
   register: users_count
   when: component == "user" 
