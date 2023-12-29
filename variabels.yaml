@@ -1,5 +1,6 @@
-MONGODB_HOST: mongodb.crobo.shop 
+ 
 CART_HOST: cart.crobo.shop
 REDIS_HOST: redis.crobo.shop
 WEB_HOST: web.crobo.shop
 CATALOGUE_HOST: catalogue.crobo.shop
+MONGODB_HOST: mongodb.crobo.shop
