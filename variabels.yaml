@@ -1,1 +1,2 @@
 MONGODB_HOST: mongodb.crobo.shop
+CART_HOST: cart.crobo.shop
