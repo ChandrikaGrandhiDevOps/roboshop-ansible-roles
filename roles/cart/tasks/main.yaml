@@ -1,12 +1,12 @@
-- name: taking nodejs roel
-  import_role:
-    name: common
-    tasks_from: nodejs
-
 - name: getting appsetup
   import_role:
     name: common
-    tasks_from: app-setup   
+    tasks_from: app-setup 
+
+- name: taking nodejs roel
+  import_role:
+    name: common
+    tasks_from: nodejs      
 
 - name: getting systemd
   import_role:
