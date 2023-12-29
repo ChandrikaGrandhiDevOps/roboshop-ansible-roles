@@ -1,6 +1,11 @@
- 
 CART_HOST: cart.crobo.shop
 REDIS_HOST: redis.crobo.shop
-WEB_HOST: web.crobo.shop
+USER_HOST: user.crobo.shop
 CATALOGUE_HOST: catalogue.crobo.shop
 MONGODB_HOST: mongodb.crobo.shop
+RABBITMQ_HOST: rabbitmq.crobo.shop
+
+SHIPPINH_HOST: shipping.crobo.shop
+PAYMENT_HOST: payment.crobo.shop
+DISPATCH_HOST: dispatch.crobo.shop
+MYSQL_HOST: mysql.crobo.shop
